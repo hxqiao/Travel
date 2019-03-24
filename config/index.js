@@ -9,15 +9,15 @@ module.exports = {
 
     // Paths fiddler charles
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',
+    assetsPublicPath: '/',
     proxyTable: {
-        '/': {
-            target: 'https://hxqiao.github.io/Trave/',
-            changeOrigin: true,
-            pathRewrite: {
-                '^/': '/'
-            }
-        }
+        // '/': {
+        //     target: 'https://hxqiao.github.io/trave/',
+        //     changeOrigin: true,
+        //     pathRewrite: {
+        //         '^/': '/'
+        //     }
+        // }
     },
     
 
