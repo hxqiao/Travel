@@ -9,7 +9,7 @@ module.exports = {
 
     // Paths fiddler charles
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
     proxyTable: {
         '/': {
             target: 'https://hxqiao.github.io/Trave/',
@@ -59,7 +59,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
 
     /**
      * Source Maps
