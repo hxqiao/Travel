@@ -1,4 +1,5 @@
 'use strict'
 module.exports = {
-  NODE_ENV: '"https://hxqiao.github.io/Trave/"'
+  NODE_ENV: '"production"',
+  BASE_API: '"https://hxqiao.github.io/Trave/"'
 }
