@@ -11,11 +11,10 @@
 import detailheader from './Details/detailheader'
 import detailsimg from './Details/detailsimg'
 import detailsprice from './Details/detailsprice'
+import { getDetailinfo } from '@/api/index'
 import axios from 'axios'
 import BScroll from 'better-scroll'
 
-//axios.defaults.baseURL='http://120.78.221.35:8888'
-axios.defaults.baseURL='http://127.0.0.1:8080'
 export default {
   name: 'Details',
   components: {
@@ -32,12 +31,9 @@ export default {
   	}
   },
   methods: {
-    getDetailinfo () {
-      axios.get('/api/detail.json?',{
-        params: {
-        id: this.$route.params.id
-      }
-    }).then(this.getDetailinfoSucc)
+    getDetailinfo (){
+      getDetailinfo()
+      .then(this.getDetailinfoSucc)
     },
     getDetailinfoSucc (res) {
       const data = res.data

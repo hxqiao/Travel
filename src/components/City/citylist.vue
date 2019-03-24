@@ -60,7 +60,9 @@ export default {
   	}
   },
   mounted () {
-  	this.scroll = new BScroll(this.$refs.list)
+  	this.scroll = new BScroll(this.$refs.list,{
+      click: true // 一开始的点击事件被bscroll阻止了，设置这个才能点击
+      })
   },
 }
 </script>

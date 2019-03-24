@@ -11,10 +11,11 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-        '/api': {
-            target: 'http://127.0.0.1:8080',
+        '/': {
+            target: 'https://hxqiao.github.io/trave/',
+            changeOrigin: true,
             pathRewrite: {
-                '^/api': '/static/mock'
+                '^/': '/'
             }
         }
     },

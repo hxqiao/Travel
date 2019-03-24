@@ -17,12 +17,10 @@ import homeheader from './Home/homeheader'
 import carousel from './Home/carousel'
 import icon from './Home/icon'
 import viewspot from './Home/viewspot'
+import { getHomeinfo } from '@/api/index'
 import axios from 'axios'
 import BScroll from 'better-scroll'
 
-
-//axios.defaults.baseURL='http://120.78.221.35:8888'
-axios.defaults.baseURL='http://127.0.0.1:8080'
 export default {
   name: 'Home',
   components: {
@@ -41,7 +39,7 @@ export default {
   },
   methods: {
   	getHomeinfo () {
-  		axios.get('/api/index.json')
+  		getHomeinfo()
   		.then(this.getHomeinfoSucc)
   	},
   	getHomeinfoSucc (res) {
@@ -54,7 +52,9 @@ export default {
 
   mounted () {
   	this.getHomeinfo()
-    this.scroll = new BScroll(this.$refs.list)
+    this.scroll = new BScroll(this.$refs.list,{
+      click: true // 一开始的点击事件被bscroll阻止了，设置这个才能点击
+      })
   }
 
 }

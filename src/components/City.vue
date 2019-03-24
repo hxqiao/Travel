@@ -23,10 +23,9 @@ import cityheader from './City/cityheader'
 import citysearch from './City/citysearch'
 import citylist from './City/citylist'
 import alphabeticindex from './City/alphabeticindex'
+import { getCityinfo } from '@/api/index'
 import axios from 'axios'
 
-//axios.defaults.baseURL='http://120.78.221.35:8888'
-axios.defaults.baseURL='http://127.0.0.1:8080'
 export default {
   name: 'City',
   components: {
@@ -46,7 +45,7 @@ export default {
   
   methods: {
     getCityinfo () {
-      axios.get('/api/city.json')
+      getCityinfo()
       .then(this.getCityinfoSucc)
     },
     getCityinfoSucc (ref) {
