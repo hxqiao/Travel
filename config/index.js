@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
         '/': {
-            target: 'https://hxqiao.github.io/trave/',
+            target: 'https://hxqiao.github.io/Trave/',
             changeOrigin: true,
             pathRewrite: {
                 '^/': '/'
