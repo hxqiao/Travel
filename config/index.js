@@ -11,13 +11,13 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-        // '/': {
-        //     target: 'https://hxqiao.github.io/trave/',
-        //     changeOrigin: true,
-        //     pathRewrite: {
-        //         '^/': '/'
-        //     }
-        // }
+        '/Travel': {
+            target: 'https://hxqiao.github.io/Travel/',
+            changeOrigin: true,
+            pathRewrite: {
+                '^/Travel': ''
+            }
+        }
     },
     
 
