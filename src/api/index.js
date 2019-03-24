@@ -11,18 +11,18 @@ import request from '@/utils/request'
 export function getHomeinfo() {
   return request({
     method: 'get',
-    url: '/static/mock/index.json'
+    url: '/Travel/static/mock/index.json'
   })
 }
 export function getDetailinfo() {
   return request({
     method: 'get',
-    url: '/static/mock/detail.json'
+    url: '/Travel/static/mock/detail.json'
   })
 }
 export function getCityinfo() {
   return request({
     method: 'get',
-    url: '/static/mock/city.json'
+    url: '/Travel/static/mock/city.json'
   })
 }
